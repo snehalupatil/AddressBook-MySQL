@@ -91,3 +91,22 @@ mysql> SELECT * FROM addressbook;
 | Snehal    | Patil    | Sangli    | Sangli    | Maharashtra |  123456 |  9876543210 | snehal@gmail.com |
 +-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
 3 rows in set (0.06 sec)
+
+
+//---------------------UC4--------------------------------
+
+
+mysql> UPDATE addressbook SET phoneNumber= '99999999999' where firstName= 'Snehal';
+Query OK, 1 row affected (0.16 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM addressbook;
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
+| firstName | lastName | address   | city      | state       | zipCode | phoneNumber | email            |
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
+| Rushi     | Patil    | Bangalore | Bangalore | Karnataka   |  234561 |  8765432109 | rushi@gmail.com  |
+| Shruti    | Gaikawad | Haveri    | Haveri    | Karnataka   |  345612 |  7654321098 | shruti@gmail.com |
+| Snehal    | Patil    | Sangli    | Sangli    | Maharashtra |  123456 | 99999999999 | snehal@gmail.com |
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
+3 rows in set (0.02 sec)
+
