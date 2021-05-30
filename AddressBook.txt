@@ -68,3 +68,26 @@ mysql> DESCRIBE addressbook;
 +-------------+--------------+------+-----+---------+-------+
 8 rows in set (0.13 sec)
 
+
+//---------------------UC3---------------------------
+
+
+mysql> INSERT INTO addressbook VALUES
+    -> ('Snehal','Patil','Sangli','Sangli','Maharashtra','123456','9876543210','
+snehal@gmail.com'),
+    -> ('Rushi','Patil','Bangalore','Bangalore','Karnataka','234561','8765432109
+','rushi@gmail.com'),
+    -> ('Shruti','Gaikawad','Haveri','Haveri','Karnataka','345612','7654321098',
+'shruti@gmail.com');
+Query OK, 3 rows affected (2.26 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM addressbook;
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
+| firstName | lastName | address   | city      | state       | zipCode | phoneNumber | email            |
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
+| Rushi     | Patil    | Bangalore | Bangalore | Karnataka   |  234561 |  8765432109 | rushi@gmail.com  |
+| Shruti    | Gaikawad | Haveri    | Haveri    | Karnataka   |  345612 |  7654321098 | shruti@gmail.com |
+| Snehal    | Patil    | Sangli    | Sangli    | Maharashtra |  123456 |  9876543210 | snehal@gmail.com |
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
+3 rows in set (0.06 sec)
