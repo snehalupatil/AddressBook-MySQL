@@ -106,7 +106,7 @@ mysql> SELECT * FROM addressbook;
 +-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
 | Rushi     | Patil    | Bangalore | Bangalore | Karnataka   |  234561 |  8765432109 | rushi@gmail.com  |
 | Shruti    | Gaikawad | Haveri    | Haveri    | Karnataka   |  345612 |  7654321098 | shruti@gmail.com |
-| Snehal    | Patil    | Sangli    | Sangli    | Maharashtra |  123456 | 99999999999 | snehal@gmail.com |
+| Snehal    | Patil    | Sangli    | Sangli    | Maharashtra |  123456 |  9999999999 | snehal@gmail.com |
 +-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
 3 rows in set (0.02 sec)
 
