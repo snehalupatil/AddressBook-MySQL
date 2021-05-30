@@ -167,3 +167,34 @@ mysql> SELECT state, COUNT(state) FROM addressbook GROUP by state;
 | Maharashtra |            1 |
 +-------------+--------------+
 2 rows in set (0.00 sec)
+
+
+//-----------------------UC8-----------------------------------
+
+mysql> INSERT INTO addressBook VALUES
+    -> ('Anjali','Sankpal','Tasgaon','Sangli','Maharashtra',456789,8888888888,'anjali@gmail.com'),
+    -> ('Aditya','Sankpal','Solapur','Sangola','Maharashtra',876589,7777777777,'aditya@gmail.com');
+Query OK, 2 rows affected (0.12 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> SELECT * FROM addressbook;
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
+| firstName | lastName | address   | city      | state       | zipCode | phoneNumber | email            |
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
+| Aditya    | Sankpal  | Solapur   | Sangola   | Maharashtra |  876589 |  7777777777 | aditya@gmail.com |
+| Anjali    | Sankpal  | Tasgaon   | Sangli    | Maharashtra |  456789 |  8888888888 | anjali@gmail.com |
+| Rushi     | Patil    | Bangalore | Bangalore | Karnataka   |  234561 |  8765432109 | rushi@gmail.com  |
+| Snehal    | Patil    | Sangli    | Sangli    | Maharashtra |  123456 |  9999999999 | snehal@gmail.com |
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
+4 rows in set (0.06 sec)
+
+mysql> SELECT firstName from addressbook order by city;
++-----------+
+| firstName |
++-----------+
+| Rushi     |
+| Anjali    |
+| Snehal    |
+| Aditya    |
++-----------+
+4 rows in set (0.00 sec)
