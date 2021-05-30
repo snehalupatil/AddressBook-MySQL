@@ -1,1 +1,30 @@
-echo "Welcome to Address Book using MySQL Database"
+ Welcome to Address Book using MySQL Database
+//---------------UC1---------------------
+
+
+mysql> CREATE DATABASE AddressBook_Service;
+Query OK, 1 row affected (0.63 sec)
+
+mysql> show databases;
++---------------------+
+| Database            |
++---------------------+
+| addressbook_service |
+| information_schema  |
+| mysql               |
+| payroll_service     |
+| performance_schema  |
+| sys                 |
++---------------------+
+6 rows in set (0.12 sec)
+
+mysql> USE addressbook_service;
+Database changed
+mysql> select database();
++---------------------+
+| database()          |
++---------------------+
+| addressbook_service |
++---------------------+
+1 row in set (0.00 sec)
+
