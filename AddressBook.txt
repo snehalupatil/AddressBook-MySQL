@@ -198,3 +198,42 @@ mysql> SELECT firstName from addressbook order by city;
 | Aditya    |
 +-----------+
 4 rows in set (0.00 sec)
+
+
+//---------------------------UC9---------------------------------
+
+mysql> ALTER TABLE addressBook ADD addressbookName VARCHAR(100) AFTER email;
+Query OK, 0 rows affected (1.90 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE addressbook ADD addressbookType VARCHAR(100) AFTER addressboo
+kName;
+Query OK, 0 rows affected (0.71 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> UPDATE addressbook SET addressbookName = 'AddressBook_1',addressbooktype='Family' WHERE firstName = 'Rushi';
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE addressbook SET addressbookName = 'AddressBook_2',addressbooktype='Friend' WHERE firstName = 'Anjali';
+Query OK, 1 row affected (0.25 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE addressbook SET addressbookName = 'AddressBook_3',addressbooktype='Family' WHERE firstName = 'Snehal';
+Query OK, 1 row affected (1.38 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> UPDATE addressbook SET addressbookName = 'AddressBook_4',addressbooktype='Profession' WHERE firstName = 'Aditya';
+Query OK, 1 row affected (0.13 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> SELECT * FROM addressbook;
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+-----------------+-----------------+
+| firstName | lastName | address   | city      | state       | zipCode | phoneNumber | email            | addressbookName | addressbookType |
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+-----------------+-----------------+
+| Aditya    | Sankpal  | Solapur   | Sangola   | Maharashtra |  876589 |  7777777777 | aditya@gmail.com | AddressBook_4   | Profession      |
+| Anjali    | Sankpal  | Tasgaon   | Sangli    | Maharashtra |  456789 |  8888888888 | anjali@gmail.com | AddressBook_2   | Friend          |
+| Rushi     | Patil    | Bangalore | Bangalore | Karnataka   |  234561 |  8765432109 | rushi@gmail.com  | AddressBook_1   | Family          |
+| Snehal    | Patil    | Sangli    | Sangli    | Maharashtra |  123456 |  9999999999 | snehal@gmail.com | AddressBook_3   | Family          |
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+-----------------+-----------------+
+4 rows in set (0.06 sec)
