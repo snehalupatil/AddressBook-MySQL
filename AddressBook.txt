@@ -110,3 +110,18 @@ mysql> SELECT * FROM addressbook;
 +-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
 3 rows in set (0.02 sec)
 
+
+//--------------------UC5----------------------------------
+
+mysql> DELETE FROM addressbook where firstName= 'Shruti';
+Query OK, 1 row affected (0.13 sec)
+
+mysql> SELECT * FROM addressbook;
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
+| firstName | lastName | address   | city      | state       | zipCode | phoneNumber | email            |
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
+| Rushi     | Patil    | Bangalore | Bangalore | Karnataka   |  234561 |  8765432109 | rushi@gmail.com  |
+| Snehal    | Patil    | Sangli    | Sangli    | Maharashtra |  123456 |  9999999999 | snehal@gmail.com |
++-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+
+2 rows in set (0.04 sec)
+
