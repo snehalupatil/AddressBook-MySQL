@@ -127,7 +127,7 @@ mysql> SELECT * FROM addressbook;
 
 
 
-//-------------------UC6-----------------------------------
+//-------------------------UC6-----------------------------------
 
 
 mysql> SELECT * FROM addressbook WHERE city = 'Sangli';
@@ -146,3 +146,24 @@ mysql> SELECT * FROM addressbook WHERE state = 'Karnataka';
 +-----------+----------+-----------+-----------+-----------+---------+-------------+-----------------+
 1 row in set (0.00 sec)
 
+
+//-----------------------UC7---------------------------------
+
+
+mysql> SELECT city, COUNT(city) FROM addressbook GROUP by city;
++-----------+-------------+
+| city      | COUNT(city) |
++-----------+-------------+
+| Bangalore |           1 |
+| Sangli    |           1 |
++-----------+-------------+
+2 rows in set (0.00 sec)
+
+mysql> SELECT state, COUNT(state) FROM addressbook GROUP by state;
++-------------+--------------+
+| state       | COUNT(state) |
++-------------+--------------+
+| Karnataka   |            1 |
+| Maharashtra |            1 |
++-------------+--------------+
+2 rows in set (0.00 sec)
