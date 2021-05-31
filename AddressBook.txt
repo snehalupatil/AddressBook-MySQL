@@ -237,3 +237,15 @@ mysql> SELECT * FROM addressbook;
 | Snehal    | Patil    | Sangli    | Sangli    | Maharashtra |  123456 |  9999999999 | snehal@gmail.com | AddressBook_3   | Family          |
 +-----------+----------+-----------+-----------+-------------+---------+-------------+------------------+-----------------+-----------------+
 4 rows in set (0.06 sec)
+
+//-------------------------UC10---------------------------
+
+mysql> SELECT addressbookType, COUNT(addressbookType) FROM addressbook GROUP BY addressbookType;
++-----------------+------------------------+
+| addressbookType | COUNT(addressbookType) |
++-----------------+------------------------+
+| Profession      |                      1 |
+| Friend          |                      1 |
+| Family          |                      2 |
++-----------------+------------------------+
+3 rows in set (0.00 sec)
