@@ -249,3 +249,28 @@ mysql> SELECT addressbookType, COUNT(addressbookType) FROM addressbook GROUP BY 
 | Family          |                      2 |
 +-----------------+------------------------+
 3 rows in set (0.00 sec)
+
+
+//------------------------UC11-----------------------------
+
+mysql> INSERT INTO addressBook VALUES
+    -> ('Shweta','Shinde','Hubali','Hubali','Karnataka',345678,9898989898,'shwea@gmail.com','AddressBook_5','Friend');
+Query OK, 1 row affected (0.76 sec)
+
+mysql> INSERT INTO addressBook VALUES
+    -> ("Swara", "Patil", "Gitanagar", "Mumbai", "Maharashtra", 561238, 787877878, "swara@gmail.com", "addressBook_6", "Family");
+Query OK, 1 row affected (0.26 sec)
+
+mysql> SELECT * FROM addressbook;
++-----------+----------+-----------+-----------+-------------+---------+------------+------------------+-----------------+-----------------+
+| firstName | lastName | address   | city      | state       | zipCode | phoneNmber | email            | addressbookName | addressbookType |
++-----------+----------+-----------+-----------+-------------+---------+------------+------------------+-----------------+-----------------+
+| Aditya    | Sankpal  | Solapur   | Sangola   | Maharashtra |  876589 |  777777777 | aditya@gmail.com | AddressBook_4   | Profession      |
+| Anjali    | Sankpal  | Tasgaon   | Sangli    | Maharashtra |  456789 |  888888888 | anjali@gmail.com | AddressBook_2   | Friend          |
+| Rushi     | Patil    | Bangalore | Bangalore | Karnataka   |  234561 |  876542109 | rushi@gmail.com  | AddressBook_1   | Family          |
+| Shweta    | Shinde   | Hubali    | Hubali    | Karnataka   |  345678 |  989899898 | shweta@gmail.com | AddressBook_5   | Friend          |
+| Snehal    | Patil    | Sangli    | Sangli    | Maharashtra |  123456 |  999999999 | snehal@gmail.com | AddressBook_3   | Family          |
+| Swara     | Patil    | Gitanagar | Mumbai    | Maharashtra |  561238 |  787877878 | swara@gmail.com  | addressBook_6   | Family          |
++-----------+----------+-----------+-----------+-------------+---------+------------+------------------+-----------------+-----------------+
+6 rows in set (0.00 sec)
+
